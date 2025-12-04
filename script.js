@@ -2,11 +2,11 @@
 
 // 城市坐標和景點名稱數據 - 已包含圖片路徑
 const locations = [
-    { city: '香港', lat: 22.302711, lng: 114.177216, name_en: 'The Peak', info: 'The Peak (太平山頂)', image_path:'太平山頂.jpg' },
-    { city: '上海', lat: 31.2286, lng: 121.4747, name_en: 'The Bund', info: 'The Bund (上海外灘)', image_path:'上海外灘.jpg' },
-    { city: '北京', lat: 39.9067, lng: 116.3975, name_en: 'The Great Wall', info: 'The Great Wall (長城)', image_path:'長城.jpg' },
-    { city: '西安', lat: 34.2611, lng: 108.9422, name_en: 'The Terracotta Army', info: 'The Terracotta Army (兵馬俑)', image_path:'兵馬俑.jpg' },
-    { city: '澳門', lat: 22.1987, lng: 113.5439, name_en: 'The Ruins of St. Paul', info: 'The Ruins of St. Paul (大三巴)', image_path:'大三巴.jpg' },
+    { city: '香港(HongKnog)', lat: 22.302711, lng: 114.177216, name_en: 'The Peak', info: 'The Peak (太平山頂)', image_path:'太平山頂.jpg' },
+    { city: '上海(ShangHai)', lat: 31.2286, lng: 121.4747, name_en: 'The Bund', info: 'The Bund (上海外灘)', image_path:'上海外灘.jpg' },
+    { city: '北京(BeiJing)', lat: 39.9067, lng: 116.3975, name_en: 'The Great Wall', info: 'The Great Wall (長城)', image_path:'長城.jpg' },
+    { city: '西安(Xi\'An)', lat: 34.2611, lng: 108.9422, name_en: 'The Terracotta Army', info: 'The Terracotta Army (兵馬俑)', image_path:'兵馬俑.jpg' },
+    { city: '澳門(Macau)', lat: 22.1987, lng: 113.5439, name_en: 'The Ruins of St. Paul', info: 'The Ruins of St. Paul (大三巴)', image_path:'大三巴.jpg' },
 ];
 
 const AMAP_STYLE = 'amap://styles/blue'; 
