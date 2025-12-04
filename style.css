@@ -1,0 +1,95 @@
+/* style.css - 終極優化版本 (固定視窗) */
+
+/* 地圖基礎容器設定 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#map {
+    height: 100%;
+}
+
+/* ⬇️ 新增：固定視窗外層容器 (實現置中、半透明背景) ⬇️ */
+#fixed-info-wrapper {
+    position: fixed; /* 固定在瀏覽器視窗上 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 黑色半透明遮罩 */
+    z-index: 1000; /* 確保在最上層 */
+    
+    /* 置中對齊內容 */
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+}
+
+/* ⬇️ 資訊視窗主內容容器 (替換原來的 .info-content) ⬇️ */
+#info-content-container {
+    position: relative; /* 讓關閉按鈕可以相對定位 */
+    
+    /* 核心設置：固定寬度和內容置中 */
+    width: 500px; 
+    padding: 15px; 
+    text-align: center; /* 文字和圖片置中 */
+    
+    /* 視窗背景和美化 */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    
+    /* 字體美化 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    
+    /* 調整 max-height 以防止視窗內容過長 */
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* 關閉按鈕樣式 */
+#close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px 10px;
+    transition: color 0.2s;
+}
+#close-btn:hover {
+    color: #cc0000;
+}
+
+/* 標題樣式 */
+#info-content-container h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em; 
+    color: #0056b3; 
+    border-bottom: 2px solid #ccc; 
+    padding-bottom: 5px;
+}
+
+/* 內文段落樣式 */
+#info-content-container p {
+    margin: 5px 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* 圖片樣式 */
+#info-content-container img {
+    width: 100%; 
+    height: auto;
+    margin: 10px auto 0 auto; 
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    object-fit: cover;
+}
+/* ⬆️ 結束新增/優化 ⬆️ */

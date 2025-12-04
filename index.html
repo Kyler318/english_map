@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>中國著名景點地圖 (高德)</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        // 確保 Key 和 Security Code 正確
+        // ⚠️ 替換 YOUR_SECURITY_CODE 為您的安全密鑰 (Jude Token)
+        window._AMapSecurityConfig = {
+            securityJsCode: 'YOUR_SECURITY_CODE', 
+        };
+    </script>
+    
+    <script async defer
+        src="https://webapi.amap.com/maps?v=2.0&key=bf37acbacbe2c4a30142c823e229169e&callback=initMap">
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div id="fixed-info-wrapper" style="display: none;">
+        <div id="info-content-container" class="info-content">
+            <button id="close-btn" onclick="closeFixedInfoWindow()">×</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
